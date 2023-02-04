@@ -9,6 +9,10 @@ it is a scanner reader that searches for products and adds them to the invoice.
 
 ![view](./images/mini-POS-view.jpg)
 
+_try the app [hier](https://ashraf-alshashaa.github.io/My-Supermarket-POS/)_
+
+---
+
 ## You can by using it
 
 - Add a product using the barcode reader or typing via the keyboard
