@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>My Supermarket</title>
+</head>
+
+<body>
+  <h1>My Supermarket</h1>
+  <p id="msg"></p>
+  <div class="root">
+    <div class="main">
+      <div class="main-header">
+        <button id="scan-new-product">New <i class="fa-solid fa-arrows-rotate"></i></button>
+        <h2 class="total-price-container">Total<span class="total-price">€ 00.00</span></h2>
+      </div>
+      <div id="barcode-container">
+        <input type="text" id="code-input" placeholder="Type the barcode">
+      </div>
+      <div class="info"></div>
+    </div>
+    <div class="order">
+      <div class="alc-cotainer category-section">
+        <span class="category-header">ALC<span class="total-alc total-category">0</span></span>
+        <li class="order-item-header">
+          <span class="order-item-name-header">NAME</span>
+          <span class="order-item-qua-header">QUA</span>
+          <span class="order-item-price-header">PRICE</span>
+        </li>
+        <ul class="alc">
+        </ul>
+      </div>
+      <div class="food-cotainer category-section">
+        <span class="category-header">FOOD<span class="total-food total-category">0</span></span>
+        <li class="order-item-header">
+          <span class="order-item-name-header">NAME</span>
+          <span class="order-item-qua-header">QUA</span>
+          <span class="order-item-price-header">PRICE</span>
+        </li>
+        <ul class="food"></ul>
+      </div>
+      <div class="-cotainer category-section">
+        <span class="category-header">SIG<span class="total-sig total-category">0</span></span>
+        <li class="order-item-header">
+          <span class="order-item-name-header">NAME</span>
+          <span class="order-item-qua-header">QUA</span>
+          <span class="order-item-price-header">PRICE</span>
+        </li>
+        <ul class="sig"></ul>
+      </div>
+    </div>
+  </div>
+  <footer> &#169; Ashraf Alshashaa</footer>
+</body>
+<script src="index.js"></script>
+
+</html>
