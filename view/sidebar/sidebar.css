@@ -1,0 +1,43 @@
+#sidebar {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 32px 16px;
+  max-width: 100%;
+  box-shadow: var(--box-shadow-l);
+}
+.app-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.app-logo img {
+  margin-right: 12px;
+  width: 64px;
+}
+.app-logo p {
+  font-size: 24px;
+}
+#sidebar ul {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 64px);
+}
+#sidebar nav {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+#sidebar ul nav:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+#sidebar nav span {
+  margin-right: 8px;
+}
+#sidebar nav p {
+  font-size: 16px;
+  font-weight: 400;
+}
