@@ -10,17 +10,18 @@ const addProductForm = () => {
   const element = document.createElement("form");
   element.id = "add-product-form";
   element.innerHTML = String.raw`
-  <label>Barcode</label>
+    <p>Add Product</p>
+    <label>Barcode:</label>
     <input name="barcode" type="text" required>
-    <label>Name</label>
+    <label>Name:</label>
     <input name="name" type="text" required>
-    <label>Buying Price</label>
+    <label>Buying Price:</label>
     <input name="buy_price" type="number" required>
-    <label>Selling Price</label>
+    <label>Selling Price:</label>
     <input name="sell_price" type="number" required>
-    <label>Quantity</label>
+    <label>Quantity:</label>
     <input name="qty" type="number" required>
-    <label>Category</label>
+    <label>Category:</label>
     <input name="category" type="text" required>
     <div class="add-products-btn-cont">
       <button id="add-products-btn" type="submit">Add</button>
@@ -29,8 +30,6 @@ const addProductForm = () => {
   `;
   return element;
 };
-
-rightSection.appendChild(addProductForm());
 
 const submitForm = (formName, cb) => {
   let data = {};
@@ -42,7 +41,13 @@ const submitForm = (formName, cb) => {
   resetForm(formName);
 };
 
-getElem("add-product-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  submitForm("add-product-form", eel.add_product);
-});
+if (getElem("add-product-form")) {
+  getElem("add-product-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    submitForm("add-product-form", eel.add_product);
+  });
+
+  getElem("cancel-products-btn").addEventListener("click", () =>
+    resetForm("add-product-form")
+  );
+}
