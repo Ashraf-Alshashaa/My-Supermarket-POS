@@ -23,3 +23,6 @@ class App_Settings:
         file_path = "./data/storage/app_settings.json"
         with open(file_path, "w+") as f:
             json.dump(data, f)
+
+    def get_one(self, setting_name):
+        return self.app_settings.get(setting_name)
