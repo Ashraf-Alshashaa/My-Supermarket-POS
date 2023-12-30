@@ -30,6 +30,7 @@ const addProductForm = () => {
   `;
   return element;
 };
+rightSection.appendChild(addProductForm());
 
 const submitForm = (formName, cb) => {
   let data = {};
