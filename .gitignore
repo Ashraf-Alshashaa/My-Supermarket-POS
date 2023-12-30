@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+*.env
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Logs and databases
+*.log
+*.sqlite
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Other
+*.pyz
+*.pyzw
+*.bak
+*.swp
