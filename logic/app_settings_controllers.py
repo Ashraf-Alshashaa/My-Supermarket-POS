@@ -1,7 +1,7 @@
 import eel
-from data.app_settings import App_Settings
+from data.app_settings import AppSettings
 
-app_settings = App_Settings()
+app_settings = AppSettings()
 
 @eel.expose
 def add_settings(settings):
@@ -9,7 +9,7 @@ def add_settings(settings):
 
 @eel.expose
 def get_settings():
-    app_settings.get_settings()
+    app_settings.get_all()
 
 @eel.expose
 def get_setting(setting):

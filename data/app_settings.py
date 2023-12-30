@@ -1,17 +1,15 @@
 import json
 import os
 
-class App_Settings:
+ILE_PATH = os.path.join(".", "data", "storage", "app_settings.json")
+class AppSettings:
+    
     def __init__(self):
-        if self.get_settings():
-          self.app_settings = self.get_settings()
-        else:
-          self.app_settings = {}
+        self.app_settings = self.get_all()
 
-    def get_settings(self):
-        file_path = "./data/storage/app_settings.json"
-        if os.path.exists(file_path):
-            with open(file_path, "r") as r:
+    def get_all(self):
+        if os.path.exists(ILE_PATH):
+            with open(ILE_PATH, "r") as r:
                 return json.load(r).get('settings', {})
         else:
             return {}
@@ -20,9 +18,8 @@ class App_Settings:
         for key, value in settings.items():
             self.app_settings[key] = value
         data = {"settings": self.app_settings}
-        file_path = "./data/storage/app_settings.json"
-        with open(file_path, "w+") as f:
+        with open(ILE_PATH, "w+") as f:
             json.dump(data, f)
 
     def get_one(self, setting_name):
-        return self.app_settings.get(setting_name)
+        return self.app_settings.get(setting_name, {})
