@@ -46,6 +46,10 @@
 }
 
 .active {
-  color: black;
-  background-color: white;
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+#sidebar .active p {
+  font-weight: 500;
 }
