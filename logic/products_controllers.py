@@ -1,9 +1,6 @@
 import eel
 from data.products import Products
 
-import eel
-from data.products import Products
-
 products = Products()
 
 @eel.expose
