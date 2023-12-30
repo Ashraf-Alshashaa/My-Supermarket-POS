@@ -31,11 +31,6 @@ body {
 #msg {
   position: absolute;
 }
-#sidebar {
-  width: 20%;
-  max-width: 300px;
-  height: 100%;
-}
 #main {
   width: 100%;
   height: 100%;

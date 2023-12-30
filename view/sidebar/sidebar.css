@@ -1,4 +1,7 @@
 #sidebar {
+  width: 20%;
+  min-width: 200px;
+  height: 100%;
   background-color: var(--primary);
   color: var(--secondary);
   padding: 32px 16px;
