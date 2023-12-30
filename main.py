@@ -1,5 +1,5 @@
 import eel
-import logic.controller
+import logic.products_controller
 import logic.setting_controllers
 
 eel.init('view')
