@@ -1,4 +1,4 @@
-from sqlite3 import Error
+from . import Error
 
 def create_db(conn, queries):
     try:

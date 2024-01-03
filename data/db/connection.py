@@ -1,6 +1,4 @@
-import sqlite3
-from sqlite3 import Error
-import os
+from . import sqlite3, Error, os
 
 def conn_db():
     try:
