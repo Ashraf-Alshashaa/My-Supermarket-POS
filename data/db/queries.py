@@ -45,3 +45,5 @@ CREATE_ORDERS_DETAILS_TABLE = '''
                     FOREIGN KEY (product_id) REFERENCES products(id)
                 )
             '''
+
+SELECT_PRODUCTS = '''SELECT * FROM products'''
