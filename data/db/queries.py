@@ -47,3 +47,10 @@ CREATE_ORDERS_DETAILS_TABLE = '''
             '''
 
 SELECT_PRODUCTS = '''SELECT * FROM products'''
+
+INSERT_PRODUCT = '''
+              INSERT INTO products (
+                  barcode, name, img, buy_price, sell_price, tax, qty, category
+              )
+              VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            '''

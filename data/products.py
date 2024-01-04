@@ -1,6 +1,6 @@
 import json
 import os
-from .db import conn_db, fetch, SELECT_PRODUCTS
+from .db import conn_db, fetch, SELECT_PRODUCTS, insert, INSERT_PRODUCT
 import base64
 
 FILE_PATH = os.path.join(".", "data", "storage", "products.json")
@@ -23,9 +23,22 @@ class Products:
             return []
 
     def add(self, product):
-        self.products.append(product)
-        data = {"products": self.products}
-        with open(FILE_PATH, "w+") as products_file:
-            json.dump(data, products_file)
-        return self.products
+        try:
+            with conn_db() as conn:
+        
+                data = [
+                    product.get('barcode', ''),
+                    product.get('name', ''),
+                    product.get('img', ''),
+                    product.get('buy_price', 0),
+                    product.get('sell_price', 0),
+                    product.get('tax', 0),
+                    product.get('qty', 0),
+                    product.get('category', '')
+                ]
+
+                insert(conn, INSERT_PRODUCT, data)
+
+        except Exception as e:
+            print(f"Error: {e}")
     
