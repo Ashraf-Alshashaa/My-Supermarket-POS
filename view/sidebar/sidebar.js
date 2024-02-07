@@ -1,5 +1,6 @@
 const sideBar = async () => {
   const navElemList = Array.from(document.getElementsByTagName("nav"));
+  const currentPage = await eel.get_setting("current_page")();
   const handleNavClick = async (clickedElem) => {
     const navPage = clickedElem.id;
 
@@ -13,7 +14,6 @@ const sideBar = async () => {
   };
 
   navElemList.map(async (elem) => {
-    const currentPage = await eel.get_setting("current_page")();
     if (elem.id === currentPage) elem.classList.add("active");
     elem.addEventListener("click", async () => {
       await handleNavClick(elem);

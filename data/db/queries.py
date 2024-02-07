@@ -20,12 +20,6 @@ CREATE_PRODUCTS_TABLE = '''
                 )
             '''
 
-CREATE_SETTING_TABLE = '''
-                CREATE TABLE IF NOT EXISTS setting (
-                    current_page TEXT NOT NULL
-                )
-            '''
-
 CREATE_ORDERS_TABLE = '''
                 CREATE TABLE IF NOT EXISTS orders (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -53,4 +47,19 @@ INSERT_PRODUCT = '''
                   barcode, name, img, buy_price, sell_price, tax, qty, category
               )
               VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            '''
+
+CREATE_APP_SETTINGS_TABLE = '''
+                CREATE TABLE IF NOT EXISTS app_settings (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name TEXT,
+                    value TEXT
+                )
+            '''
+
+UPDATE_SETTING = '''
+              UPDATE app_settings SET value=? WHERE name=?
+            '''
+SELECT_SETTINGS = '''
+              SELECT * FROM app_settings
             '''

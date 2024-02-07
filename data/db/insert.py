@@ -5,6 +5,5 @@ def insert(conn, query, data):
         with conn:
             cursor = conn.cursor()
             cursor.execute(query, data)
-            print("done")
     except Error as e:
         print(f"Error: {e}")

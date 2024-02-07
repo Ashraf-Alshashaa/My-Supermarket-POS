@@ -5,11 +5,11 @@ app_settings = AppSettings()
 
 @eel.expose
 def add_settings(settings):
-    app_settings.add(settings)
+    return app_settings.add(settings)
 
 @eel.expose
 def get_settings():
-    app_settings.get_all()
+    return app_settings.get_all()
 
 @eel.expose
 def get_setting(setting):
